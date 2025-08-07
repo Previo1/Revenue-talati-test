@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Revenue Talati Test પેમેન્ટ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Noto Sans Gujarati', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .qr-img {
+      width: 200px;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+
+    input[type="file"] {
+      display: block;
+      margin: 0 auto 1rem;
+      border: 1px dashed #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #00b894;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #009879;
+    }
+
+    #downloadLink {
+      display: none;
+      background: #0984e3;
+      margin-top: 10px;
+    }
+
+    #downloadLink:hover {
+      background: #0652dd;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #777;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>📲 Revenue Talati Test પેમેન્ટ</h2>
+    <p>અમે આપેલા QR કોડથી પેમેન્ટ કરો:</p>
+    <img src="qr.png" alt="QR Code" class="qr-img" />
+
+    <label>🧾 તમારું પેમેન્ટ સ્ક્રીનશોટ અપલોડ કરો:</label>
+    <input type="file" id="paymentScreenshot" accept="image/*" />
+
+    <button id="verifyBtn" class="btn">✅ ચકાસણી કરો (મેન્યુઅલ)</button>
+
+    <a id="downloadLink" href="success.pdf" download class="btn">📥 PDF ડાઉનલોડ કરો</a>
+
+    <p class="note">ચકાસણી પછી જ PDF લિંક દેખાશે.</p>
+  </div>
+
+  <script src="verify.js"></script>
+</body>
+</html>
